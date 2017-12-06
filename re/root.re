@@ -1,4 +1,4 @@
-open ReactNative;
+open BsReactNative;
 
 let scheduleIcon config =>
   <Icon name="calendar" size=36 color=config##tintColor style=Style.(style [marginTop 5.]) />;

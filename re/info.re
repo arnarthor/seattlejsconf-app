@@ -1,4 +1,4 @@
-open ReactNative;
+open BsReactNative;
 
 /* Variables */
 let windowWidth = (Dimensions.get `window)##width;
@@ -18,7 +18,7 @@ let styles =
             alignItems `stretch,
             justifyContent `center,
             paddingTop (
-              PlatformRe.os === PlatformRe.IOS ?
+              Platform.os === Platform.IOS ?
                 20. : float_of_int StatBar.constants##currentHeight
             )
           ],

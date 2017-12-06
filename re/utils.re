@@ -10,3 +10,9 @@ let getIndexFromSchedule schedule =>
   | [firstDate, ..._] => List.length (getScheduleForDate schedule firstDate) + 2
   | [] => 2
   };
+
+let optionMap fn opt_value =>
+  switch opt_value {
+  | None => None
+  | Some value => Some (fn value)
+  };

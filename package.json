@@ -22,8 +22,8 @@
   },
   "dependencies": {
     "apollo-client": "^1.9.0-0",
-    "bs-platform": "^1.8.2",
-    "bs-react-native": "https://github.com/BuckleTypes/bs-react-native.git",
+    "bs-platform": "^2.1.0",
+    "bs-react-native": "reasonml-community/bs-react-native#e666ef946e0682bccb9b8b983a3647728bdee450",
     "expo": "^18.0.3",
     "graphql-tag": "^2.4.2",
     "moment": "^2.18.1",
@@ -31,7 +31,7 @@
     "react-apollo": "^1.4.7",
     "react-native": "^0.45.1",
     "react-navigation": "^1.0.0-beta.11",
-    "reason-react": "^0.2.3",
+    "reason-react": "^0.2.4",
     "redux": "^3.7.2",
     "redux-offline": "^2.0.0"
   }

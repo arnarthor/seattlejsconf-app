@@ -1,4 +1,4 @@
-open ReactNative;
+open BsReactNative;
 
 /* Types */
 type sourceItemDimensions = {
@@ -34,7 +34,7 @@ type _state = {
 let animationDuration = 300.;
 
 let statusOffset =
-  PlatformRe.os === PlatformRe.IOS ? 0. : float_of_int StatBar.constants##currentHeight;
+  Platform.os === Platform.IOS ? 0. : float_of_int StatBar.constants##currentHeight;
 
 let listPadding = 10;
 
@@ -102,7 +102,7 @@ let styles =
             justifyContent `center,
             backgroundColor "rgb(54, 97, 115)",
             paddingTop (
-              PlatformRe.os === PlatformRe.IOS ?
+              Platform.os === Platform.IOS ?
                 20. : float_of_int StatBar.constants##currentHeight
             )
           ],
@@ -149,7 +149,7 @@ let animateExpandModal
     ::sourceItemDimensions
     ::onFinish => {
   let {top, width, height, contentOpacity} = modalAnimationState;
-  let windowWidth = (DimensionsRe.get `window)##width - listPadding * 2;
+  let windowWidth = (Dimensions.get `window)##width - listPadding * 2;
   switch listRef {
   | None => ()
   | Some r =>
@@ -170,7 +170,7 @@ let animateExpandModal
                 value::top
                 toValue::(
                   `raw (
-                    PlatformRe.os === PlatformRe.IOS ?
+                    Platform.os === Platform.IOS ?
                       iosBarHeight +. float_of_int listPadding :
                       statusOffset +. float_of_int listPadding
                   )

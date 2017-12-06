@@ -1,4 +1,4 @@
-open ReactNative;
+open BsReactNative;
 
 let styles =
   StyleSheet.create

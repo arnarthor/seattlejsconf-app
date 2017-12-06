@@ -1,4 +1,4 @@
-open ReactNative;
+open BsReactNative;
 
 /* Variables */
 let windowWidth = (Dimensions.get `window)##width;
@@ -18,7 +18,7 @@ let androidDirections = "http://maps.google.com/maps?daddr=47.651857,-122.355291
 
 /* Methods */
 let getDirections _ =>
-  if (PlatformRe.os === PlatformRe.IOS) {
+  if (Platform.os === Platform.IOS) {
     Link.openURL iosDirections
   } else {
     Link.openURL androidDirections
@@ -38,7 +38,7 @@ let styles =
             alignItems `stretch,
             justifyContent `center,
             paddingTop (
-              PlatformRe.os === PlatformRe.IOS ?
+              Platform.os === Platform.IOS ?
                 20. : float_of_int StatBar.constants##currentHeight
             )
           ],
@@ -100,7 +100,7 @@ let make _ _children => {
           <MapView.Marker
             title="Fremont Foundry"
             image=(
-              PlatformRe.os === PlatformRe.IOS ?
+              Platform.os === Platform.IOS ?
                 Packager.require "../../../static/pin.png" :
                 Packager.require "../../../static/pin_small.png"
             )

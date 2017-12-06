@@ -1,4 +1,4 @@
-open ReactNative;
+open BsReactNative;
 
 type _state = {scrollRef: option ReasonReact.reactRef};
 

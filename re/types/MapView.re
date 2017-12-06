@@ -18,7 +18,7 @@ module Marker = {
       props::{
         "coordinate": coordinate,
         "title": title,
-        "image": Js.Undefined.from_opt (UtilsRN.option_map rawImageSourceJS image)
+        "image": Js.Undefined.from_opt (Utils.optionMap rawImageSourceJS image)
       }
       children;
 };
